@@ -43,14 +43,15 @@ header label {
   left           : 0;
   width          : 20%;
   height         : 100vh;
-  background     : rgba(175, 7, 7, 0.9);
+  background     : rgba(0, 0, 0, 0.9);
+  color: rgb(255, 254, 254);
   transition     : all 0.5s;
   transform      : translateX(-100%);
 }
 
 .menu a {
   display        : block;
-  color          : salmon;
+  color          : rgb(255, 255, 255);
   height         : 50px;
   text-decoration: none;
   padding        : 15px;
@@ -72,7 +73,7 @@ header .contenedor {
 header {
   width           : 100%;
   height          : 50px;
-  background      : brown;
+  background      : rgb(0, 0, 0);
   color           : cornsilk;
   top             : 0;
   left            : 0;
@@ -87,12 +88,13 @@ header {
 Section 1 
 **********/
 header {
+  border          : 2px solid rgb(255, 255, 255);
   width           : 100%;
   text-align      : center;
 }
 
 body {
-  background-image: url("cloud.jpg");
+  background-image: url("img/bg.jpg");
 }
 
 h3 {
@@ -102,7 +104,9 @@ h3 {
 }
 
 p {
-  font-size       : 1em;
+  margin-left: 0;
+  font-size       : 3em;
+  color: white;
 }
 
 .question {
@@ -111,12 +115,12 @@ p {
 }
 
 .collapsible {
-  border          : 2px solid black;
+  border          : 2px solid rgb(255, 255, 255);
   width           : var(--width);
   height          : 100vh;
   float           : right;
-  background-color: rgb(255, 255, 255);
-  color           : rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  color           : rgb(255, 255, 255);
   cursor          : pointer;
   padding         : 18px;
   text-align      : left;
@@ -127,12 +131,12 @@ p {
 }
 
 .collapsible_left {
-  border          : 2px solid black;
+  border          : 2px solid rgb(255, 255, 255);
   width           : var(--width);
   height          : 100vh;
   float           : left;
-  background-color: rgb(255, 255, 255);
-  color           : rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  color           : rgb(255, 255, 255);
   cursor          : pointer;
   padding         : 18px;
   text-align      : left;
@@ -141,6 +145,73 @@ p {
   transition      : width 0.25s ease;
   position        : relative;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+a:hover {
+  font-style: italic;
+}
+
+
+.content {
+  width             : 80%;
+  height            : 100vh;
+  float             : right;
+  padding           : 0 18px;
+  margin-top: 20px;
+}
+
+.presentation {
+  text-align: justify;
+  width: 20%;
+  height: auto;
+  font-size: 1,5em;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: auto;
+  color: white;
+}
+
+.presentation:hover {
+  color: black;
+}
+
+.presentation2 {
+  text-align: justify;
+  width: 20%;
+  height: auto;
+  font-size: 1,5em;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: 60%;
+  color: white;
+}
+
+.presentation2:hover {
+  color: black;
+}
+
+progress {
+  margin-top: 5%;
+  width: 30%;
+  height: 5%;
+}
+
+
+/* marquee.home {
+  height: 450px;
+  width: 150px;
+  padding: 8px;
+  background-color: white;
+  color: black;
+  font-size: 2em;
+  
+} */
+
 
 /* Pour le responsive */
 
@@ -168,9 +239,3 @@ p {
   }
 }
 
-.content {
-  width             : 75%;
-  height            : 100vh;
-  float             : right;
-  padding           : 0 18px;
-}
