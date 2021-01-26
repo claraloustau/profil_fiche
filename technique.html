@@ -21,6 +21,8 @@
       </div>
     </header>
 
+    
+
     <button type="button" class="collapsible_left">
       <h3><a href="index.html">Home</a></h3>
     </button>
@@ -38,7 +40,55 @@
     </button>
 
     <div class="content">
-      <h2>TECHNIQUE</h2>
+      <h2>Technique</h2>
+ 
+  
+        <div class="range-wrap">
+          <input type="range" class="range">
+          <output class="bubble"></output>
+        </div>
+  
+        <div class="range-wrap">
+          <input type="range" class="range">
+          <output class="bubble"></output>
+        </div>
+  
+        <div class="range-wrap">
+          <input type="range" class="range">
+          <output class="bubble"></output>
+        </div>
+  
+        <div class="range-wrap">  
+          <input type="range" class="range">
+          <output class="bubble"></output>
+        </div>
+  
+        <div class="range-wrap">
+          <input type="range" class="range">
+          <output class="bubble"></output>
+        </div>
     </div>
+    <script>const allRanges = document.querySelectorAll(".range-wrap");
+      allRanges.forEach(wrap => {
+        const range = wrap.querySelector(".range");
+        const bubble = wrap.querySelector(".bubble");
+      
+        range.addEventListener("input", () => {
+          setBubble(range, bubble);
+        });
+        setBubble(range, bubble);
+      });
+      
+      function setBubble(range, bubble) {
+        const val = range.value;
+        const min = range.min ? range.min : 0;
+        const max = range.max ? range.max : 100;
+        const newVal = Number(((val - min) * 100) / (max - min));
+        bubble.innerHTML = val;
+      
+        // Sorta magic numbers based on size of the native UI thumb
+        bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+      }
+      </script>
   </body>
 </html>

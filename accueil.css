@@ -2,240 +2,82 @@
 Body
 *****/
 
-@import url("fontello-codes.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@1,800&display=swap');
 body {
   background-image: url("");
+  margin: 0;
 }
 
 /**********
 Navigation
 ***********/
 
-@import url("fontello-codes.css");
-
-* {
-  margin         : 0;
-  padding        : 0;
-  box-sizing     : border-box;
-}
-h1 {
-  float          : left;
-  position       : absolute;
-  margin-bottom  : 10px;
-  margin-left    : 45%;
-}
-
-#menu-bar {
-  display        : none;
-}
-
-header label {
-  float          : right;
-  font-size      : 28px;
-  margin         : 6px 0px;
-  cursor         : pointer;
-}
-
-.menu {
-  position       : absolute;
-  top            : 50px;
-  left           : 0;
-  width          : 20%;
-  height         : 100vh;
-  background     : rgba(0, 0, 0, 0.9);
-  color: rgb(255, 254, 254);
-  transition     : all 0.5s;
-  transform      : translateX(-100%);
-}
-
-.menu a {
-  display        : block;
-  color          : rgb(255, 255, 255);
-  height         : 50px;
-  text-decoration: none;
-  padding        : 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.menu a:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-#menu-bar:checked ~ .menu {
-  transform       : translateX(0%);
-}
-
-header .contenedor {
-  display         : table;
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr, 1,2fr, 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+  grid-template-areas: 
+  "header header header"
+  "main truc truc"
+  "machin truc truc"
+  "machin bidule bidule"
+  "machin bidule bidule";
+  height: 100vh;
 }
 
 header {
-  width           : 100%;
-  height          : 50px;
+  grid-area: header;
   background      : rgb(0, 0, 0);
   color           : cornsilk;
-  top             : 0;
-  left            : 0;
+  height: 27px;
 }
 
-.contenedor {
-  width           : 98%;
-  margin          : auto;
+header > h2{
+  margin-top: -2px;
 }
 
-/*********
-Section 1 
-**********/
-header {
-  border          : 2px solid rgb(255, 255, 255);
-  width           : 100%;
-  text-align      : center;
+main{
+  grid-area: main; 
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background-color: rgb(255, 255, 255);
 }
 
-body {
-  background-image: url("img/bg.jpg");
+main p{
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-h3 {
-  margin-left     : -7px;
-  font-size       : 2vh;
-  writing-mode    : vertical-rl;
+.truc{
+  grid-area: truc;
 }
 
-p {
-  margin-left: 0;
-  font-size       : 3em;
-  color: white;
+.bidule{
+  grid-area: bidule; 
 }
 
-.question {
-  font-size       : 2em;
-  padding-top     : 25%;
+.machin{
+  grid-area: machin;
+  background: url("./img/road-4510033_960_720.jpg") center;
 }
 
-.collapsible {
-  border          : 2px solid rgb(255, 255, 255);
-  width           : var(--width);
-  height          : 100vh;
-  float           : right;
-  background-color: rgb(0, 0, 0);
-  color           : rgb(255, 255, 255);
-  cursor          : pointer;
-  padding         : 18px;
-  text-align      : left;
-  outline         : none;
-  font-size       : 15px;
-  transition      : width 0.25s ease;
-  position        : relative;
-}
-
-.collapsible_left {
-  border          : 2px solid rgb(255, 255, 255);
-  width           : var(--width);
-  height          : 100vh;
-  float           : left;
-  background-color: rgb(0, 0, 0);
-  color           : rgb(255, 255, 255);
-  cursor          : pointer;
-  padding         : 18px;
-  text-align      : left;
-  outline         : none;
-  font-size       : 15px;
-  transition      : width 0.25s ease;
-  position        : relative;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-size: 1em;
-}
-
-a:hover {
-  font-style: italic;
-}
-
-
-.content {
-  width             : 80%;
-  height            : 100vh;
-  float             : right;
-  padding           : 0 18px;
-  margin-top: 20px;
-}
-
-.presentation {
-  text-align: justify;
-  width: 20%;
-  height: auto;
-  font-size: 1,5em;
-  margin-top: 5%;
-  margin-right: 5%;
-  margin-left: auto;
-  color: white;
-}
-
-.presentation:hover {
-  color: black;
-}
-
-.presentation2 {
-  text-align: justify;
-  width: 20%;
-  height: auto;
-  font-size: 1,5em;
-  margin-top: 5%;
-  margin-right: auto;
-  margin-left: 60%;
-  color: white;
-}
-
-.presentation2:hover {
-  color: black;
-}
-
-progress {
-  margin-top: 5%;
-  width: 30%;
-  height: 5%;
-}
-
-
-/* marquee.home {
-  height: 450px;
-  width: 150px;
-  padding: 8px;
-  background-color: white;
-  color: black;
+.dg{
   font-size: 2em;
-  
-} */
+  text-align: center; 
+  margin-top: 20%;
+}
+.wd{
+  font-size: 2em;
+  text-align: center; 
+  margin-top: 15%;
+}
 
+ a{
+  color: black;
+  text-decoration: none;
+}
 
-/* Pour le responsive */
-
-@media (max-width   : 850px) {
-  html,
-  body {
-    height          : auto;
-    font-size       : 1em;
-  }
-
-  p {
-    font-size       : 1em;
-  }
-
-  .collapsible {
-    border          : 2px solid black;
-    width           : 100%;
-    height          : 70px;
-    background-color: rgb(255, 255, 255);
-    color           : rgb(0, 0, 0);
-    cursor          : pointer;
-    padding         : 18px;
-    text-align      : left;
-    outline         : none;
-  }
+ a:hover {
+ text-decoration: line-through;
 }
 
